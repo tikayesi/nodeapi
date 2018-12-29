@@ -20,15 +20,15 @@ module.exports = (sequelize, type) => {
             field:'AmountSign',
             type: type.STRING
         },
-        account_number: {
+        accountId: {
             field: 'Account_id',
-            type: type.INTEGER,
-            onDelete: 'CASCADE',
+            type: type.INTEGER
+            // onDelete: 'CASCADE',
 
-            references:{
-                model:'account',
-                key: 'accountNumber'
-            }
+            // references:{
+            //     model:'account',
+            //     key: 'AccountNumber'
+            // }
         }
     }, {
         tableName: 'transaction',

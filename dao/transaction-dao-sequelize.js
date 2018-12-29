@@ -27,11 +27,11 @@ exports.getById = function getById(id, callback){
 
 exports.insert = function insert(data, callback){
     let transaction = data;
-    if(transaction.account==null && transaction.account_number==null){
-        res.json('Transaction kosong');
+    if(transaction.account==null && transaction.accountId==null){
+        res.json('account kosong');
     }else{
-        if(transaction.account_number==null){
-            transaction.account_number=transaction.account.accountNumber;
+        if(transaction.accountId==null){
+            transaction.accountId=transaction.account.accountNumber;
         }
     }
     Transaction.create(transaction)
@@ -46,11 +46,11 @@ exports.insert = function insert(data, callback){
 
 exports.update = function update(id, data, callback) {
    let transaction = data;
-    if(transaction.account==null && transaction.account_number==null){
+    if(transaction.account==null && transaction.account==null){
         res.json('transaction kosong');
     }else{
-        if(transaction.account_number==null){
-            transaction.account_number = transaction.account.accountNumber;
+        if(transaction.account==null){
+            transaction.account = transaction.account.accountNumber;
         }
     }
     

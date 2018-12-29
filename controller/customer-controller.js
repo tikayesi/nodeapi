@@ -10,7 +10,6 @@ exports.customers = function(req, res){
             response.err(error, res);
         } else {
             response.ok(rows, res)
-            // return res.json(rows);
         }
     });
 };

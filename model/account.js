@@ -16,12 +16,12 @@ module.exports = (sequelize, type) => {
         customerId: {
             field: 'Customer_id',
             type: type.INTEGER,
-            onDelete: 'CASCADE',
+            // onDelete: 'CASCADE',
 
-            references:{
-                model:'customer',
-                key: 'customerNumber'
-            }
+            // references:{
+            //     model:'customer',
+            //     key: 'customerNumber'
+            // }
         }
     }, {
         tableName: 'account',

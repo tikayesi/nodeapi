@@ -17,8 +17,8 @@ const sequelize = new Sequelize('bootcamp1', 'root', '', {
 const Customer = CustomerModel(sequelize, Sequelize)
 const Account = AccountModel(sequelize, Sequelize)
 const Transaction = TransactionModel(sequelize, Sequelize)
-Account.belongsTo(Customer, {foreignKey: 'customerId', targetKey:'customerNumber'});
-Transaction.belongsTo(Account, {foreignKey: 'account_number', targetKey:'accountNumber'});
+Account.belongsTo(Customer, {foreignKey: 'customer_id', targetKey:'customerNumber'});
+Transaction.belongsTo(Account, {foreignKey: 'account_id', targetKey:'accountNumber'});
 
 module.exports = {
   Customer,
